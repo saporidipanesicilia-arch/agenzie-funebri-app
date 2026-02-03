@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    /* TYPOGRAPHY */
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* FUNERAL DOMAIN COLORS (Slate Based) */
+    --color-funeral-base: #f8fafc;  /* Slate 50 - Main Background */
+    --color-funeral-surface: #ffffff; /* White - Card Background */
+    
+    --color-funeral-900: #0f172a; /* Slate 900 - Primary Text / Sidebar / Primary Button */
+    --color-funeral-800: #1e293b; /* Slate 800 - Hover states */
+    --color-funeral-700: #334155; /* Slate 700 - Headings */
+    --color-funeral-600: #475569; /* Slate 600 - Body Text */
+    --color-funeral-500: #64748b; /* Slate 500 - Secondary Labels */
+    --color-funeral-400: #94a3b8; /* Slate 400 - Icons / Inactive */
+    --color-funeral-200: #e2e8f0; /* Slate 200 - Borders */
+    --color-funeral-100: #f1f5f9; /* Slate 100 - Secondary Backgrounds */
+
+    /* SEMANTIC STATUS COLORS (Muted/Pastel) */
+    --color-status-success-bg: #f0fdf4; /* Emerald 50 */
+    --color-status-success-text: #166534; /* Emerald 800 */
+    
+    --color-status-warning-bg: #fffbeb; /* Amber 50 */
+    --color-status-warning-text: #92400e; /* Amber 800 */
+    
+    --color-status-error-bg: #fff1f2; /* Rose 50 */
+    --color-status-error-text: #9f1239; /* Rose 800 */
+    
+    --color-status-info-bg: #f0f9ff; /* Sky 50 */
+    --color-status-info-text: #075985; /* Sky 800 */
+
+    /* ACCENT */
+    --color-accent-gold: #d4b483; /* Reverent Gold - Use sparingly */
+}
+
+/* CUSTOM UTILITIES */
+@layer components {
+    .ui-card {
+        @apply bg-white rounded-xl border border-funeral-200 shadow-sm overflow-hidden;
+    }
+    
+    .ui-container {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; 
+    }
+
+    .ui-heading {
+        @apply text-lg font-medium text-funeral-900;
+    }
+
+    .ui-body {
+        @apply text-sm text-funeral-600;
+    }
+}

@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: agenzie-funebri-app
+    env: docker
+    plan: free
+    branch: main
+    envVars:
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_DEBUG
+        value: "true" # Set false for production
+      - key: APP_ENV
+        value: production
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        value: db.your-supabase-project.supabase.co
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        value: postgres
+      - key: DB_USERNAME
+        value: postgres
+      - key: DB_PASSWORD
+        sync: false # User must provide this manually
